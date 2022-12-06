@@ -5,5 +5,5 @@ Repositório com códigos em C e C++, Alguns exercícios e ideias criativas;
 Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidade e objetivo de cada um deles;
 
 - struct.c 
-<br>
+
     Uma demonstração simples do funcionamento de uma estrutura na linguagem C, faz a leitura de dados a partir do usuário e depois mostra os resultados lidos acessando a estrutura.
