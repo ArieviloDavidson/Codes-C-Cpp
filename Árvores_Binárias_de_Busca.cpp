@@ -21,7 +21,7 @@ class Queue:public queue<T>{
 };
 
 
-// DEFINI«√O DA CLASSE DO N”
+// DEFINIÔøΩÔøΩO DA CLASSE DO NÔøΩ
 template <class T>
 class BSTNode{
 	public:
@@ -35,7 +35,7 @@ class BSTNode{
 		}	
 };
 
-//DefiniÁ„o da classe da ·rvore
+//DefiniÔøΩÔøΩo da classe da ÔøΩrvore
 template <class T>
 class BST{
 	public:
@@ -50,16 +50,16 @@ class BST{
 		//}
 		bool isEmpty() const{
 			return root == 0;
-		}
+		} // DIZ SE A √ÅRVORE EST√Å VAZIA
 		void preorder(){
 			preorder(root);
-		}
+		} // MET√ìDO DE ORDENA√á√ÉO PR√â-ORDEM
 		void inorder(){
 			inorder(root);
-		}
+		} // M√âTODO DE ORDENA√á√ÉO EM ORDEM
 		void postorder(){
 			postorder(root);
-		}
+		} // M√âTODO DE ORDENA√á√ÉO P√ìS-ORDEM
 		T *search(const T& el) const{
 			return search(root,el);
 		}
@@ -81,7 +81,7 @@ class BST{
 		//void findAndDeleteByMerging(const T &el);
 };
 
-// BUSCA EM EXTENS√O DE CIMA PRA BAIXO DA DIREITA PRA ESQUERDA
+// BUSCA EM EXTENSÔøΩO DE CIMA PRA BAIXO DA DIREITA PRA ESQUERDA
 
 template <class T>
 void BST<T>::breadthFirst(){
@@ -102,7 +102,7 @@ void BST<T>::breadthFirst(){
 	}
 }
 
-// Pesquisar por valores em ·rvores bin·rias de busca
+// Pesquisar por valores em ÔøΩrvores binÔøΩrias de busca
 template<class T>
 T* BST<T>::search(BSTNode<T>* p, const T& el) const{
 	while(p != 0){
@@ -128,7 +128,7 @@ void BST<T>::inorder(BSTNode<T> *p){
 	}
 }
 
-//Procedimento prÈ-ordem
+//Procedimento prÔøΩ-ordem
 
 template <class T>
 void BST<T>::preorder(BSTNode<T> *p){
@@ -139,7 +139,7 @@ void BST<T>::preorder(BSTNode<T> *p){
 	}
 }
 
-//Procedimento pÛs-ordem
+//Procedimento pÔøΩs-ordem
 
 template <class T>
 void BST<T>::postorder(BSTNode<T> *p){
@@ -155,7 +155,7 @@ void BST<T>::postorder(BSTNode<T> *p){
 template <class T>
 void BST<T>::insert(const T& el){
 	BSTNode<T> *p = root, *prev = 0;
-	while(p != 0){ // encontrar um lugar para inserir um nÛ
+	while(p != 0){ // encontrar um lugar para inserir um nÔøΩ
 	prev = p;
 		if(el < p->el){
 			p = p->left;
@@ -163,31 +163,31 @@ void BST<T>::insert(const T& el){
 			p = p->right;
 		} 
 	}
-	if(root == 0){ // verifica se a ·rvore esta vazia
-		root = new BSTNode<T>(el); //insere o nÛ na raiz
-	}else if(el < prev->el){ // compara el com o filho ‡ esquerda
-		prev->left = new BSTNode<T>(el); //insere o nÛ no filho ‡ esquerda
+	if(root == 0){ // verifica se a ÔøΩrvore esta vazia
+		root = new BSTNode<T>(el); //insere o nÔøΩ na raiz
+	}else if(el < prev->el){ // compara el com o filho ÔøΩ esquerda
+		prev->left = new BSTNode<T>(el); //insere o nÔøΩ no filho ÔøΩ esquerda
 	}else{ 
-		prev->right = new BSTNode<T>(el); //insere o nÛ no filho ‡ direita.
+		prev->right = new BSTNode<T>(el); //insere o nÔøΩ no filho ÔøΩ direita.
 	}
 }
 
-//Procedimentos para deletar nÛ
+//Procedimentos para deletar nÔøΩ
 
 template <class T>
 void BST<T>::deleteByMerging(BSTNode<T>*& node){
 	BSTNode<T> *tmp = node;
 	if(node != 0){
-		if(!node->right){//nÛ n„o tem filhos a direita: seu filho esquerdo (se houver) È anexado a seu pai
+		if(!node->right){//nÔøΩ nÔøΩo tem filhos a direita: seu filho esquerdo (se houver) ÔøΩ anexado a seu pai
 			node = node->left;
-		}else if(node->left == 0){//nÛ n„o tem filhos a esquerda: seu filho direito (se houver) È anexado a seu pai
+		}else if(node->left == 0){//nÔøΩ nÔøΩo tem filhos a esquerda: seu filho direito (se houver) ÔøΩ anexado a seu pai
 			node = node->right;
-		}else{//Mesclar sub·rvores
+		}else{//Mesclar subÔøΩrvores
 			tmp = node->left;//Mova pra esquerda
-			while(tmp->right != 0){//Ent„o na medida do possivel
+			while(tmp->right != 0){//EntÔøΩo na medida do possivel
 				tmp = tmp->right;
 			}
-			tmp->right = node->right;//estabelecer a ligaÁ„o entre o nÛ mais ‡ direita da sub·rvore esquerda e a sub·rvore direita
+			tmp->right = node->right;//estabelecer a ligaÔøΩÔøΩo entre o nÔøΩ mais ÔøΩ direita da subÔøΩrvore esquerda e a subÔøΩrvore direita
 			tmp = node;
 			node = node->left;
 		}
@@ -218,9 +218,9 @@ void BST<T>::findAndDeleteByMerging(const T &el){
 			deleteByMerging(prev->right);
 		}
 	}else if(root != 0){
-		cout << "Elemento" << el << "n„o est· na ·rvore!" << endl;
+		cout << "Elemento" << el << "nÔøΩo estÔøΩ na ÔøΩrvore!" << endl;
 	}else{
-		cout << "A ·rvore est· vazia!" << endl;
+		cout << "A ÔøΩrvore estÔøΩ vazia!" << endl;
 	}
 }
 
@@ -230,7 +230,7 @@ int main(){
 	int el;
 	int *pesq;
 	setlocale( LC_ALL, "" ); //Apenas para acentuar
-	//Inserir elementos na ·rvore
+	//Inserir elementos na ÔøΩrvore
 	arvore1.insert(10);
 	arvore1.insert(14);
 	arvore1.insert(9);
@@ -245,9 +245,9 @@ int main(){
 	//Percursos:
 	cout << "\n Percurso in-order:";
 	arvore1.inorder();
-	cout << "\n Percurso prÈ-order:";
+	cout << "\n Percurso prÔøΩ-order:";
 	arvore1.preorder();
-	cout << "\n Percurso pÛs-order:";
+	cout << "\n Percurso pÔøΩs-order:";
 	arvore1.postorder();
 	cout << endl;
 	arvore1.breadthFirst();	
@@ -256,9 +256,9 @@ int main(){
 	
 	cout << "\n Percurso in-order:";
 	arvore1.inorder();
-	cout << "\n Percurso prÈ-order:";
+	cout << "\n Percurso prÔøΩ-order:";
 	arvore1.preorder();
-	cout << "\n Percurso pÛs-order:";
+	cout << "\n Percurso pÔøΩs-order:";
 	arvore1.postorder();
 	cout << endl;
 	arvore1.breadthFirst();	

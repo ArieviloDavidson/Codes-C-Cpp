@@ -31,3 +31,7 @@ Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidad
 - Fibonacci.cpp
 
     Algoritmo para estudo de função recursiva e simples em C++ e informar os "x" primeiros números da sequência de Fibonacci.
+
+- Árvores_Binárias_de_Busca.cpp
+
+    Implementação de uma árvore binária de busca, com além de funções de inserção e remoção (básicas), funções de métodos de ordenação dessas árvoes, ainda não conta com funções visuais e/ou balanceamento
