@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int bissexto(int x){ // FUN��O QUE "CALCULA" SE O ANO � BISSEXTO OU N�O A PARTIR DE UMA F�RMULA;
+int bissexto(int x){ // FUN��O QUE "CALCULA" SE O ANO � BISSEXTO OU N�O A PARTIR DE UMA F�RMULA MATEMÁTICA CONHECIDA;
 	int result;
 	if(x%4 == 0 && (x%100 != 0 || x%400 == 0)){
 		result = 1;

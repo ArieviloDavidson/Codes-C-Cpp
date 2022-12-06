@@ -7,7 +7,7 @@
 	 }else{
 	 	return n*fatorial(n-1);
 	 }
- }
+ } // DE FORMA RECURSIVA E INTUITIVA CALCULA O FATORIAL DE UM NÚMERO
  
  int main(){
  	

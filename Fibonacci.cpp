@@ -7,7 +7,7 @@ int fib(int x){
 	}else{
 		return fib(x-2) + fib(x-1);
 	}
-}
+} // USO DA RECURSIVIDADE E DA DEFINIÇÃO DA SEQUÊNCIA
 
 int main(){
 	

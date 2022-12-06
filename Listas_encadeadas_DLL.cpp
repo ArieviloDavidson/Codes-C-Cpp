@@ -2,18 +2,18 @@
 
 using namespace std;
 
-// DLL = LISTA DUPLAMENTE LIGADA
+// DLL = LISTA DUPLAMENTE LIGADA (POIS CADA NÃ“ Ã‰ LIGADO COM O SEU ANTECESSOR E SUCESSOR NA LISTA)
 
-// Classe para os nós da lista
+// Classe para os nï¿½s da lista
 class DLLNode {
 	public:
 		DLLNode(){
 			next = prev = 0;
 		}
 		DLLNode(int el, DLLNode *n = 0, DLLNode *p = 0){
-		info = el; // info guarda a informação 
-		next = n; // next vincula o proximo nó
-		prev = p; // prev vincula o nó anterior
+		info = el; // info guarda a informaï¿½ï¿½o 
+		next = n; // next vincula o proximo nï¿½
+		prev = p; // prev vincula o nï¿½ anterior
 		}
 		int info;
 		DLLNode *next, *prev;
@@ -27,12 +27,12 @@ class DoublyLinkedList {
 		}
 		void addToDLLTail(int); // INSERE NO TAIL
 		int deleteFromDLLTail(); // DELETA DO TAIL
-		//. . . . . . . . . . . . . INSERIR AS OUTRAS OPERAÇÕES
+		//. . . . . . . . . . . . . INSERIR AS OUTRAS OPERAï¿½ï¿½ES
 	protected:
 		DLLNode *head, *tail;
 };
 
-// DEFINIÇÃO DAS FUNÇÕES DA CLASSE DOUBLYLINKEDLIST
+// DEFINIï¿½ï¿½O DAS FUNï¿½ï¿½ES DA CLASSE DOUBLYLINKEDLIST
 
 void DoublyLinkedList :: addToDLLTail(int el) {
 	if(tail != 0){
@@ -45,10 +45,10 @@ void DoublyLinkedList :: addToDLLTail(int el) {
 
 int DoublyLinkedList :: deleteFromDLLTail() {
 	int el = tail->info;
-	if(head == tail){ // Se já apenas um nó na lista
+	if(head == tail){ // Se jï¿½ apenas um nï¿½ na lista
 		delete head;
 		head = tail = 0;
-	}else{ // se há mais de um nó na lista
+	}else{ // se hï¿½ mais de um nï¿½ na lista
 		tail = tail->prev;
 		delete tail->next;
 		tail->next = 0;

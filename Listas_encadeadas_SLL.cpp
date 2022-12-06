@@ -2,23 +2,23 @@
 
 using namespace std;
 
-// SLL = LISTA SINGULARMENTE LIGADA
+// SLL = LISTA SINGULARMENTE LIGADA (POIS CADA NÃ“ Ã‰ LIGADO APENAS COM O SEU SUCESSOR)
 
-// Classe para os nós da lista
+// Classe para os nï¿½s da lista
 class IntSLLNode{
 	public:
 		IntSLLNode(){
 			next = 0;
 		}
 		IntSLLNode (int el, IntSLLNode *ptr = 0){
-			info = el; // info guarda a informação
-			next = ptr; // next vincula os nós da lista
+			info = el; // info guarda a informaï¿½ï¿½o
+			next = ptr; // next vincula os nï¿½s da lista
 		}
 		int info;
 		IntSLLNode *next;
 };
 
-// Classe para acesso á lista
+// Classe para acesso ï¿½ lista
 class IntSLLList{
 	private:
 		IntSLLNode *head, *tail;
@@ -34,12 +34,12 @@ class IntSLLList{
 		void addToTail(int); // INSERE NO TAIL
 		int deleteFromHead(); // DELETA DO HEAD
 		int deleteFromTail(); // DELETA DO TAIL
-		void deleteNode(int);
-		bool isInList(int) const;
-		void printSLLList();
+		void deleteNode(int); // DELETA UM NÃ“ ESPECIFICO A PARTIR DA INFORMAÃ‡ÃƒO CONTIDA NELE
+		bool isInList(int) const; // RETORNA SE UM DETERMINADO VALOR (INFO) ESTÃ PRESENTE NA LISTA (TRUE OR FALSE)
+		void printSLLList(); // MOSTRA A LISTA NA ATUAL SITUAÃ‡ÃƒO
 };
 
-// DEFINIÇÃO DAS FUNÇÕES DA CLASSE INTSLLLIST
+// DEFINIï¿½ï¿½O DAS FUNï¿½ï¿½ES DA CLASSE INTSLLLIST
 
 void IntSLLList :: addToHead(int el){
 	head = new IntSLLNode(el, head);
@@ -49,7 +49,7 @@ void IntSLLList :: addToHead(int el){
 }
 
 void IntSLLList :: addToTail(int el){
-	if(tail != 0){ // SE A LISTA NÃO TIVER VAZIA
+	if(tail != 0){ // SE A LISTA Nï¿½O TIVER VAZIA
 		tail -> next = new IntSLLNode(el);
 		tail = tail->next;
 	}else{
@@ -57,10 +57,10 @@ void IntSLLList :: addToTail(int el){
 	}
 }
 
-int IntSLLList :: deleteFromHead(){ // NÃO CONSIDERAMOS AQUI AINDA O CASO DA LISTA ESTAR VAZIA
+int IntSLLList :: deleteFromHead(){ // Nï¿½O CONSIDERAMOS AQUI AINDA O CASO DA LISTA ESTAR VAZIA
 	int el = head->info;
 	IntSLLNode *tmp = head;
-	if(head == tail){ // SE SÓ TIVER UM NÓ (UM ELEMENTO) NA LISTA
+	if(head == tail){ // SE Sï¿½ TIVER UM Nï¿½ (UM ELEMENTO) NA LISTA
 		head = tail = 0;
 	}else{
 		head = head->next;	
@@ -69,12 +69,12 @@ int IntSLLList :: deleteFromHead(){ // NÃO CONSIDERAMOS AQUI AINDA O CASO DA LIS
 	return el;
 }
 
-int IntSLLList :: deleteFromTail(){ // NÃO CONSIDERAMOS AQUI AINDA O CASO DA LISTA ESTAR VAZIA
+int IntSLLList :: deleteFromTail(){ // Nï¿½O CONSIDERAMOS AQUI AINDA O CASO DA LISTA ESTAR VAZIA
 	int el = tail->info;
-	if(head == tail){ // SE SÓ TIVER UM NÓ (UM ELEMENTO) NA LISTA
+	if(head == tail){ // SE Sï¿½ TIVER UM Nï¿½ (UM ELEMENTO) NA LISTA
 		delete head;
 		head = tail = 0;
-	}else{ // SE TIVER MAIS DE UM NÓ 
+	}else{ // SE TIVER MAIS DE UM Nï¿½ 
 		IntSLLNode *tmp; // PARA ACHAR O PREDECESSOR DE TAIL DA LISTA
 		for(tmp = head; tmp->next != tail; tmp = tmp->next);
 		delete tail;
@@ -84,22 +84,22 @@ int IntSLLList :: deleteFromTail(){ // NÃO CONSIDERAMOS AQUI AINDA O CASO DA LIS
 	return el;
 }
 
-void IntSLLList :: deleteNode(int el){ // DELETAR UM ELEMENTO ESPECÍFICO CASO ELE EXISTA NA LISTA
-	if(head != 0){ // SE LISTA NÃO VAZIA
-		if(head == tail && el == head->info){ // SE SÓ TEM UM NÓ NA LISTA E O ELEMENTO DESSE NÓ É O PROCURADO
+void IntSLLList :: deleteNode(int el){ // DELETAR UM ELEMENTO ESPECï¿½FICO CASO ELE EXISTA NA LISTA
+	if(head != 0){ // SE LISTA Nï¿½O VAZIA
+		if(head == tail && el == head->info){ // SE Sï¿½ TEM UM Nï¿½ NA LISTA E O ELEMENTO DESSE Nï¿½ ï¿½ O PROCURADO
 			delete head;
 			head = tail = 0;
 		}else{
-			if(el == head->info){ // SE HÁ MAIS DE UM NÓ E O ELEMENTO PROCURADO ESTÁ NO PRIMEIRO NÓ
+			if(el == head->info){ // SE Hï¿½ MAIS DE UM Nï¿½ E O ELEMENTO PROCURADO ESTï¿½ NO PRIMEIRO Nï¿½
 				IntSLLNode *tmp = head;
 				head = head->next;
 				delete tmp; // HEAD ANTERIOR E DELETADO
 			}else{
 				IntSLLNode *pred, *tmp;
-				for(pred = head, tmp = head->next; tmp != 0 && !(tmp->info == el); pred = pred->next, tmp = tmp->next); // ATÉ TMP INFO = EL;
+				for(pred = head, tmp = head->next; tmp != 0 && !(tmp->info == el); pred = pred->next, tmp = tmp->next); // ATï¿½ TMP INFO = EL;
 				if(tmp != 0){ // OU SEJA TMP ENCONTROU O EL
 					pred->next = tmp->next; // A GROSSO MODO PULA UMA CASA
-					if(tmp == tail){ // SE O EL ESTÁ EM TAIL
+					if(tmp == tail){ // SE O EL ESTï¿½ EM TAIL
 						tail = pred;
 					}
 					delete tmp;
@@ -109,7 +109,7 @@ void IntSLLList :: deleteNode(int el){ // DELETAR UM ELEMENTO ESPECÍFICO CASO EL
 	}
 }
 
-bool IntSLLList :: isInList(int el) const{ // DIZ SE UM EL ESTÁ PRESENTE EM UMA LISTA
+bool IntSLLList :: isInList(int el) const{ // DIZ SE UM EL ESTï¿½ PRESENTE EM UMA LISTA
 	IntSLLNode *tmp;
 	for(tmp = head; tmp != 0 && !(tmp->info == el); tmp = tmp->next);
 	return tmp != 0;
@@ -118,9 +118,9 @@ bool IntSLLList :: isInList(int el) const{ // DIZ SE UM EL ESTÁ PRESENTE EM UMA 
 void IntSLLList :: printSLLList(){ // PRINTA A LISTA DO HEAD PARA O TAIL
 	IntSLLNode *tmp = head;
 	while(tmp != NULL){
-		cout << "tmp->info: " << tmp->info << endl; // INFO PRESENTE NO NÓ
-		cout << "&tmp: " << tmp << endl; // ENDEREÇO DESSE NÓ
-		cout << "tmp->next: " << tmp->next << endl << endl; // ENDEREÇO DO PRÓXIMO NÓ
+		cout << "tmp->info: " << tmp->info << endl; // INFO PRESENTE NO Nï¿½
+		cout << "&tmp: " << tmp << endl; // ENDEREï¿½O DESSE Nï¿½
+		cout << "tmp->next: " << tmp->next << endl << endl; // ENDEREï¿½O DO PRï¿½XIMO Nï¿½
 		tmp = tmp->next;
 	}
 }
