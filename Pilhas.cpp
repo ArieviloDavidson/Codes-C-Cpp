@@ -79,7 +79,7 @@ void Stack::printStack(){
 
 int main(){
 	
-	Stack teste;
+	Stack teste; // CRIAÇÃO DA PILHA TESTE
 	
 	teste.push(45);
 	teste.push(3);

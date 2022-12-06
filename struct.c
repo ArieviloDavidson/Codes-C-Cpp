@@ -7,7 +7,7 @@ int main(){
 		char nome[40];
 		int numero;
 		float nota;	
-	};//definiÁ„o da struct
+	};//definicao da struct (e das caracteristicas ou informa√ß√µes que a cont√©m)
 	
 	struct ficha_aluno aluno;
 	
