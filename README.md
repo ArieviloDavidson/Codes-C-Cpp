@@ -8,7 +8,7 @@ Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidad
 
     Reza a lenda que se você não fizer esse código na linguagem que está aprendendo, não evolui nela!!!
 
-<img align="center" alt="Hello World" height="30" width="40" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alura.com.br%2Fartigos%2Fhello-world-em-varias-linguagens&psig=AOvVaw0Fr2_HgtFBe89423IBMYCB&ust=1670528511467000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMjSwuWh6PsCFQAAAAAdAAAAABAI">
+<img align="center" alt="Hello World" height="30" width="40" src="file:///C:/Users/55229/Pictures/2560px-HelloWorld.svg.png">
 
 - bissexto.c
 
