@@ -4,8 +4,6 @@ Repositório com códigos em C e C++, Alguns exercícios e ideias criativas;
 
 Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidade e objetivo de cada um deles;
 
-OBS. Os códigos estão comentados da ordem em que aparecem no REPOSITÓRIO.
-
 - Árvores_Binárias_de_Busca.cpp
 
     Implementação de uma árvore binária de busca, com além de funções de inserção e remoção (básicas), funções de métodos de ordenação dessas árvoes, ainda não conta com funções visuais e/ou balanceamento.
