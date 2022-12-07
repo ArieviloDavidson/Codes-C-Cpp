@@ -27,7 +27,7 @@ int aleatorio(){
 
 float valor_da_funcao(int x1, int x2){
 	float res = pow(x1-1,2) + 100*pow(x2 - pow(x1,2),2);
-	return res;
+	return res; // Retorna o valor candidato para melhor valor desse teste
 }
 
 void tweak(int vet[2]){
@@ -42,7 +42,7 @@ void tweak(int vet[2]){
 		}
 		vet[i] = vet[i] + aux;
 	}
-}
+} // Perturbação gerada para testar se a qualidade da resposta é melhor que a primeira testada
 
 int main(){
 	
@@ -68,7 +68,7 @@ int main(){
 			x2 = x2aux;
 		}
 		i++;
-	}while(s != 0 and i<1000000);
+	}while(s != 0 and i<1000000); // Enquanto s não for mínimo (0 pois o valor é conhecido), ou o número de interações ser maior que 1mi
 	
 	cout << "Valores encontrados: " << endl << "X1 = " << x1 << endl << "X2 = " << x2 << endl << "com s sendo = " << s;
 

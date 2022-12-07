@@ -14,7 +14,7 @@ Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidad
 
 - Pilhas.cpp
 
-    Código para a estutura de dados conhecida como PILHA, esse código contém funções básicas e didáticas para o uso das pilhas como listas encadeadas.
+    Código para a estrutura de dados conhecida como PILHA, esse código contém funções básicas e didáticas para o uso das pilhas como listas encadeadas.
 
 - Listas_encadeadas_SLL.cpp
 
@@ -34,4 +34,20 @@ Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidad
 
 - Árvores_Binárias_de_Busca.cpp
 
-    Implementação de uma árvore binária de busca, com além de funções de inserção e remoção (básicas), funções de métodos de ordenação dessas árvoes, ainda não conta com funções visuais e/ou balanceamento
+    Implementação de uma árvore binária de busca, com além de funções de inserção e remoção (básicas), funções de métodos de ordenação dessas árvoes, ainda não conta com funções visuais e/ou balanceamento.
+
+- Filas.cpp
+
+    Código para a estrutura de dados conhecida como FILA, esse código contém funções básicas e didáticas para o uso de filas como listas encadeadas, com funções básicas (enqueue, dequeue) seguindo as regras da estrutura.
+
+- HillClimbing.cpp
+
+    Algoritmo de Tópicos especiais em otimização para encontrar mínimo global de uma função conhecida, feito para estudo mas está em funcionamento para uso prático.
+
+- min-max.cpp
+
+    Encontra o minimo ou máximo de uma função a partir de sua derivada (conhecida) sem restart (ou seja, pode achar um mínimo/máximo local dependendo do primeiro valor chutado)
+
+- min-max-com-restart.cpp
+
+    Encontra o mínimo ou máximo de uma função a partir de sua derivada (conhecida) com restart (ou seja, pode achar com mais facilidade o mínimo-máximo global levando em conta que reinicia com outro valor aleatório)

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// CLASSE PARA O NÓ
+// CLASSE PARA O Nï¿½
 
 class Node{
 	public:
@@ -25,15 +25,15 @@ class Queue{
 	public:
 		Queue(){
 			head = tail = 0;
-		}
-		void clearQ();
+		} // CRIAÃ‡ÃƒO DA FILA VAZIA
+		void clearQ(); // LIMPA A FILA 
 		bool isEmpty(){
 			return (head == NULL);
-		}
-		void enqueue(int el);
-		void dequeue();
-		int firstEl();
-		void printQueue();
+		} // RETORNA SE A FILA ESTÃ VAZIA 
+		void enqueue(int el); // COLOCA UM ELEMENTO NA FILA, SEGUINDO A REGRA DO LIFO (LAST IN, FIRST OUT)
+		void dequeue(); // RETIRA UM ELEMENTO DA FILA SEGUINDO A REGRA DO LIFO (LAST IN, FIRST OUT)
+		int firstEl(); // MOSTRA O PRIMEIRA ELEMENTO DA FILA
+		void printQueue(); // MOSTRA O ESTADO ATUAL DA FILA COMPLETA
 };
 
 void Queue::clearQ(){
@@ -46,7 +46,7 @@ void Queue::clearQ(){
 }
 
 void Queue::enqueue(int el){
-	if(tail != 0){ // SE A LISTA NÃO ESTIVER VAZIA
+	if(tail != 0){ // SE A LISTA Nï¿½O ESTIVER VAZIA
 		tail->next = new Node(el, 0);
 		tail = tail->next;
 	}else{
@@ -58,7 +58,7 @@ void Queue::dequeue(){
 	if(!isEmpty()){
 		cout << "\nElemento removido: " << firstEl();
 		Node *tmp = head;
-		if(head == tail){ // SE HÁ APENAS UM NÓ NA LISTA
+		if(head == tail){ // SE Hï¿½ APENAS UM Nï¿½ NA LISTA
 			head = tail = 0;
 		}else{
 			head = head->next;
