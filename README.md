@@ -8,7 +8,7 @@ Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidad
 
     Reza a lenda que se você não fizer esse código na linguagem que está aprendendo, não evolui nela!!!
 
-<img display="flex" align="center" alt="Hello World" height="50%" width="50%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HelloWorld.svg/768px-HelloWorld.svg.png?20100207111424">
+<img margin-left="30%" align="center" alt="Hello World" height="50%" width="50%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HelloWorld.svg/768px-HelloWorld.svg.png?20100207111424">
 
 - bissexto.c
 
