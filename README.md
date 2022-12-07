@@ -4,6 +4,12 @@ Repositório com códigos em C e C++, Alguns exercícios e ideias criativas;
 
 Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidade e objetivo de cada um deles;
 
+- Hello World C.c
+
+    Reza a lenda que se você não fizer esse código na linguagem que está aprendendo, não evolui nela!!!
+
+<img align="center" alt="Hello World" height="30" width="40" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.alura.com.br%2Fartigos%2Fhello-world-em-varias-linguagens&psig=AOvVaw0Fr2_HgtFBe89423IBMYCB&ust=1670528511467000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMjSwuWh6PsCFQAAAAAdAAAAABAI">
+
 - bissexto.c
 
     Algoritmo para estudo de função simples em C e dizer se um ano é ou não bissexto. 
