@@ -4,6 +4,10 @@ Repositório com códigos em C e C++, Alguns exercícios e ideias criativas;
 
 Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidade e objetivo de cada um deles;
 
+- Area_Triângulo.cpp
+
+    Programa (Algoritmo) para o cálculo de área de um triângulo, utilizando classes para receber dados, guardar as informações, e exibir e calcular outras informações. 
+
 - Árvores_Binárias_de_Busca.cpp
 
     Implementação de uma árvore binária de busca, com além de funções de inserção e remoção (básicas), funções de métodos de ordenação dessas árvoes, ainda não conta com funções visuais e/ou balanceamento.
