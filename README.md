@@ -52,8 +52,12 @@ Todos os códigos estão comentados mas vou deixar um guia aqui da funcionalidad
 
 - min-max.cpp
 
-    Encontra o minimo ou máximo de uma função a partir de sua derivada (conhecida) sem restart (ou seja, pode achar um mínimo/máximo local dependendo do primeiro valor chutado)
+    Encontra o minimo ou máximo de uma função a partir de sua derivada (conhecida) sem restart (ou seja, pode achar um mínimo/máximo local dependendo do primeiro valor chutado).
 
 - min-max-com-restart.cpp
 
-    Encontra o mínimo ou máximo de uma função a partir de sua derivada (conhecida) com restart (ou seja, pode achar com mais facilidade o mínimo-máximo global levando em conta que reinicia com outro valor aleatório)
+    Encontra o mínimo ou máximo de uma função a partir de sua derivada (conhecida) com restart (ou seja, pode achar com mais facilidade o mínimo-máximo global levando em conta que reinicia com outro valor aleatório).
+
+- Calculadora.c
+
+    Programa básico em C que faz operações simples matemáticas.
